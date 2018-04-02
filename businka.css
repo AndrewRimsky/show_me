@@ -1,0 +1,277 @@
+/* CSS Document */
+html,body,div,span,applet,object,iframe,h1,h2,
+h3,h4,h5,h6,p,blockquote,a,abbr,acronym,address,
+big,cite,del,dfn,em,img,ins,kbd,q,s,samp,small,
+strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,
+dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,
+embed,figure,figcaption,footer,header,hgroup,input,menu,
+nav,output,ruby,section,summary,time,mark,audio,video {
+border: 0;
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+}
+
+.bk-wrap-businka .bk-pages-content .bk-ui-right .bk-ui-left {
+}
+.bk-wrap-businka {
+	z-index:99999;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: column;
+	display: -webkit-flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	background-color: rgba(0,0,0,.9);
+}
+/**.bk-anim-center{
+	transform: translateZ(0);
+	background-color: rgba(0,0,0,.9);
+	} **/
+.bk-pages {
+	display: -webkit-flex;
+	-webkit-align-self: center;
+	-webkit-justify-content: center;
+	height: 88%;
+	display: flex;
+	width: 100%;
+	align-self: center;
+	justify-content: center;
+	padding: 30px;
+}
+.qt-btn {
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	height: 40px;
+	background-image: url(../skin/businka-02.svg);
+}
+.bk-pages-content {
+	transition:all ease-in-out .4s;
+	display: none;
+	opacity: 0;
+}
+.bk-pages-content.active {
+	opacity: 1;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-align-self: center;
+	-webkit-justify-content: center;
+	align-self: center;
+	justify-content: center;
+	/**height:90%;**/
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.bk-image {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.bk-image-caption {
+	box-sizing: border-box;
+	width: 100%;
+	/** bottom: 0;
+    position: absolute;**/
+	padding: 10px;
+	color: #fafafa;
+	background: rgb(99, 166, 202);
+}
+.bk-ui-right, .bk-ui-left {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 40%;
+	width: 50px;
+	height: 80px;
+	background-size: cover;
+	opacity: .7;
+}
+.bk-ui-right {
+	right: 0;
+	background-image: url(../skin/businka-04.svg);
+}
+.bk-ui-left {
+	left: 0;
+	background-image: url(../skin/businka-03.svg);
+}
+.bk-thumbs-container {
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	padding: 1%;
+	/* display: none; */
+	height: 12%;
+	display: flex;
+	justify-content: center;
+}
+.bk-thumb {
+	opacity: .5;
+	margin-left: 1%;
+	/* border-radius: 2px; */
+	background-size: cover;
+	width: 80px;
+	height: 80px;
+	background-position: center center;
+}
+.active-thumb {
+	opacity: 1;
+}
+.has-video {
+	position: relative;
+	padding-top: 35px;
+	height: 0;
+	overflow: hidden;
+	width:80%;
+}
+.has-video iframe {
+	background:rgba(0,0,0,0.9);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.loader{
+	background-color:rgba(0,0,0,.9);
+	position:fixed;
+	top:0;
+	}
+.circles {
+	background-repeat:no-repeat;
+	background-image: radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  ),
+										  radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  ),
+										  radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  );
+	background-size: 2.2em 2.2em,
+								 1.3em 1.3em,
+								 1.3em 1.3em;
+	background-position: calc(50% - 1.5em) 50%,
+										50% 50%,
+										calc(50% + 1.5em) 50%;
+	animation: circle 1s linear infinite alternate;
+	}
+	@keyframes circle {
+		0% {background-size: 2.2em 2.2em,
+								 1.3em 1.3em,
+								 1.3em 1.3em;}
+		50% {background-size: 1.3em 1.3em,
+								 2.2em 2.2em,
+								 1.3em 1.3em;}
+		100% {background-size: 1.3em 1.3em,
+								 1.3em 1.3em,
+								 2.2em 2.2em;}
+		}
+
+
+@media screen (max-width: 767 px) and (orientation:portrait) {
+ .bk-pages {
+ height:auto !important;
+}
+ .bk-ui-left, .bk-ui-right {
+ top:45%;
+ width:80px;
+ height:150px;
+}
+ .qt-btn {
+ top:20%;
+ width:100px;
+ height:100px;
+}
+.has-video{
+	width:100%;
+	}
+}
+
+
+
+
+/*  HOME PAGE STYLES ----------- DELETE AFTER BUILD */
+html {
+	height:100%;
+	}
+body {
+	height:100%;
+	margin: 0
+}
+.wrap{
+	margin: 0 40px;
+    flex-direction: column;
+    display: flex;
+}
+.head{
+	display: block;
+    color: rgb(132, 67, 150);
+    margin-right: 40px;
+	}
+	.name{
+		    font-family: Futura PT;
+    padding-bottom: 6px;
+    display: inline-block;
+    position: relative;
+    font-weight: 800;
+    text-transform: uppercase;
+	}
+button {
+	text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    width: 10%;
+    height: 50px;
+    color: white;
+    background-color: rgb(132, 67, 150);
+    border-radius: 4px;
+    /* box-shadow: gray 0px 0px 31px -4px; */
+    font-family: Futura PT;
+    font-size: 0.8em;
+}
+button:hover {
+	transition: all .4s ease;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:not(:first-child){
+	margin-left: 20px;
+	}
+	.flex-center{
+		left:0;
+		top:0;
+		width:100%;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    position: fixed;
+		}
+		.main{
+	justify-content: center;
+    width: 100%;
+    align-self: center;
+    display: flex;
+	}
+.name:before {
+  content : "";
+  position: absolute;
+  left    : 0;
+  bottom  : 0;
+  height  : 3px;
+  width   : 65%;  /* or 100px */
+  border-bottom:3px solid rgb(132, 67, 150);
+}

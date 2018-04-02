@@ -1,0 +1,39 @@
+/* CSS Document */
+html, body{
+	height:100%;}
+.loader {
+	background-repeat:no-repeat;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(130,65,220,1.00);
+	background-image: radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  ),
+										  radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  ),
+										  radial-gradient(
+										  white 30%,
+    									  hsla(0,40%,100%,0) 35%
+										  );
+	background-size: 2.2em 2.2em,
+								 1.3em 1.3em,
+								 1.3em 1.3em;
+	background-position: calc(50% - 1.5em) 50%,
+										50% 50%,
+										calc(50% + 1.5em) 50%;
+	animation: circle 1s linear infinite alternate;
+	}
+	@keyframes circle {
+		0% {background-size: 2.2em 2.2em,
+								 1.3em 1.3em,
+								 1.3em 1.3em;}
+		50% {background-size: 1.3em 1.3em,
+								 2.2em 2.2em,
+								 1.3em 1.3em;}
+		100% {background-size: 1.3em 1.3em,
+								 1.3em 1.3em,
+								 2.2em 2.2em;}
+		}

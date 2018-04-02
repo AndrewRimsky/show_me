@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Show Me Project Demo</title>
+<link rel="stylesheet" type="text/css" href="css/businka.css">
+</head>
+
+<body>
+<div class="wrap">
+	<header class="head">
+			<h1 class="name">Show Me - responsive slider</h1>
+	</header>
+	<div class="flex-center">
+		<div class="main">
+			<button data-businka-image="img/img1.jpg" class="test" data-businka-caption="show me" name="businka" value="Businka">Show me!</button>
+			<button data-businka-image="img/img2.jpg" class="test1" data-businka-caption="show me">Show me!</button>
+			<button data-businka-image="img/img3.jpg" class="test2" data-businka-caption="show me">Show me!</button>
+			<button data-businka-image="img/img4.jpg" class="test3" data-businka-caption="show me">Show me!</button>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/businka-0.7.0.js"></script>
+<script>
+	$(".test").on('click', function (){
+  	  Businka.show({ui:'outside', thumbPosition: 'bottom', bgColor: 'rgba(0,0,0,.8)'},[{href: "img/un4-1.jpg", caption: 'Forrest'},
+	  						  {href: "img/un3-1.jpg", caption: 'Plant'},
+	  						  {href: "img/un2-1.jpg", caption: 'Caption'},
+							  {href: "img/un5-1.jpg", caption: 'Caption'},
+							  {href: "img/un1-1.jpg", caption: 'Caption'},
+							   ]);
+	});
+	$(".test1").on('click', function (){
+  	  Businka.show({ui:'outside', thumb:0, bgColor: 'rgba(0,0,0,.8)'},[{href: "https://youtu.be/LKroRc-gZVA"
+																	   }]);
+	});
+		$(".test2").on('click', function (){
+  	  Businka.show({ui:'outside', thumbBg:'rgba(0,0,0,.9)', loader:{type:'none', delay:100}, thumbPosition:'top',uiColor:'#000', bgColor: 'rgba(255,255,255,.8)', bgImage:'img/ptb02-07.png', },[{href: "img/un3-1.jpg", caption: 'Forrest'},
+	  						  {href: "img/un4-1.jpg", caption: 'Plant'},
+	  						  {href: "img/un2-1.jpg", caption: 'Caption'},
+							  {href: "img/un5-1.jpg", caption: 'Caption'},
+							  {href: "img/un1-1.jpg", caption: 'Caption'},
+							   ]);
+	});
+	$(".test3").on('click', function (){
+  	  Businka.show({ui:'outside', thumbPosition: 'bottom', bgColor: 'rgba(0,0,0,.8)',loader:{type:'none', delay:100}},[{href: "img/un4-1.jpg", caption: 'Forrest'}]);
+	});
+	
+</script>
+</body>
+</html>
